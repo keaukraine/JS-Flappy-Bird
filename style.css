@@ -1,9 +1,21 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#30c0df+0,30c0df+50,ded895+51,ded895+100 */
+background: linear-gradient(to bottom,  #30c0df 0%,#30c0df 50%,#ded895 51%,#ded895 100%);
+}
+
 #canvas
 {
-    background-color:#30c0df;
-    border: 2px solid black;
+    background-color:#000;
     display: block;
-    margin: auto;
-    padding: auto;
-    
+    /* margin-top: calc(25vh - 50%); */
+    width: 100%;
+    max-height: 100vh;
 }
