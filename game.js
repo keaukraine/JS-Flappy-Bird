@@ -324,7 +324,7 @@ function update() {
 }
 
 function draw() {
-  sctx.fillStyle = "#323031";
+  sctx.fillStyle = "#424041";
   sctx.fillRect(0, 0, scrn.width, scrn.height);
   bg.draw();
   pipe.draw();
