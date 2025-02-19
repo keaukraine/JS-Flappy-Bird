@@ -2,7 +2,7 @@ const RAD = Math.PI / 180;
 const scrn = document.getElementById("canvas");
 const sctx = scrn.getContext("2d");
 scrn.tabIndex = 1;
-scrn.addEventListener("click", () => {
+scrn.addEventListener("touchstart", () => {
   switch (state.curr) {
     case state.getReady:
       state.curr = state.Play;
@@ -258,28 +258,29 @@ const UI = {
     switch (state.curr) {
       case state.Play:
         sctx.lineWidth = "2";
-        sctx.font = "35px Squada One";
+        sctx.font = "38px silkscreenbold";
         sctx.fillText(this.score.curr, scrn.width / 2 - 5, 50);
         sctx.strokeText(this.score.curr, scrn.width / 2 - 5, 50);
         break;
       case state.gameOver:
-        sctx.lineWidth = "2";
-        sctx.font = "40px Squada One";
-        let sc = `SCORE :     ${this.score.curr}`;
+        sctx.lineWidth = "1";
+        sctx.font = "35px silkscreenbold";
+        let sc = `SCORE: ${this.score.curr}`;
         try {
           this.score.best = Math.max(
             this.score.curr,
             localStorage.getItem("best")
           );
           localStorage.setItem("best", this.score.best);
-          let bs = `BEST  :     ${this.score.best}`;
-          sctx.fillText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
-          sctx.strokeText(sc, scrn.width / 2 - 80, scrn.height / 2 + 0);
-          sctx.fillText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
-          sctx.strokeText(bs, scrn.width / 2 - 80, scrn.height / 2 + 30);
+          let bs = `BEST:  ${this.score.best}`;
+          const offset = 100;
+          sctx.fillText(sc, scrn.width / 2 - offset, scrn.height / 2 + 0);
+          sctx.strokeText(sc, scrn.width / 2 - offset, scrn.height / 2 + 0);
+          sctx.fillText(bs, scrn.width / 2 - offset, scrn.height / 2 + 30);
+          sctx.strokeText(bs, scrn.width / 2 - offset, scrn.height / 2 + 30);
         } catch (e) {
-          sctx.fillText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
-          sctx.strokeText(sc, scrn.width / 2 - 85, scrn.height / 2 + 15);
+          sctx.fillText(sc, scrn.width / 2 - offset, scrn.height / 2 + 15);
+          sctx.strokeText(sc, scrn.width / 2 - offset, scrn.height / 2 + 15);
         }
 
         break;

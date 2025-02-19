@@ -19,3 +19,30 @@ background: linear-gradient(to bottom,  #060913 0%,#211f20 50%,#201e20 51%,#201e
     width: 100%;
     max-height: 100vh;
 }
+
+
+
+@font-face {
+    font-family: 'silkscreenbold';
+    src: url('fonts/slkscrb-webfont.eot');
+    src: url('fonts/slkscrb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/slkscrb-webfont.woff2') format('woff2'),
+         url('fonts/slkscrb-webfont.woff') format('woff'),
+         url('fonts/slkscrb-webfont.ttf') format('truetype'),
+         url('fonts/slkscrb-webfont.svg#silkscreenbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'silkscreennormal';
+    src: url('fonts/slkscr-webfont.eot');
+    src: url('fonts/slkscr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/slkscr-webfont.woff2') format('woff2'),
+         url('fonts/slkscr-webfont.woff') format('woff'),
+         url('fonts/slkscr-webfont.ttf') format('truetype'),
+         url('fonts/slkscr-webfont.svg#silkscreennormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
