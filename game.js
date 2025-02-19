@@ -335,4 +335,4 @@ function draw() {
   UI.draw();
 }
 
-setInterval(gameLoop, 20);
+setInterval(gameLoop, 16);
