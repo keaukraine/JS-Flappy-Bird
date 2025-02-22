@@ -267,17 +267,17 @@ const UI = {
         sctx.font = "35px silkscreenbold";
         let sc = `SCORE: ${this.score.curr}`;
         try {
-          this.score.best = Math.max(
-            this.score.curr,
-            localStorage.getItem("best")
-          );
-          localStorage.setItem("best", this.score.best);
-          let bs = `BEST:  ${this.score.best}`;
+          // this.score.best = Math.max(
+          //   this.score.curr,
+          //   localStorage.getItem("best")
+          // );
+          // localStorage.setItem("best", this.score.best);
+          // let bs = `BEST:  ${this.score.best}`;
           const offset = 100;
           sctx.fillText(sc, scrn.width / 2 - offset, scrn.height / 2 + 0);
           sctx.strokeText(sc, scrn.width / 2 - offset, scrn.height / 2 + 0);
-          sctx.fillText(bs, scrn.width / 2 - offset, scrn.height / 2 + 30);
-          sctx.strokeText(bs, scrn.width / 2 - offset, scrn.height / 2 + 30);
+          // sctx.fillText(bs, scrn.width / 2 - offset, scrn.height / 2 + 30);
+          // sctx.strokeText(bs, scrn.width / 2 - offset, scrn.height / 2 + 30);
         } catch (e) {
           sctx.fillText(sc, scrn.width / 2 - offset, scrn.height / 2 + 15);
           sctx.strokeText(sc, scrn.width / 2 - offset, scrn.height / 2 + 15);
